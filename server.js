@@ -30,25 +30,7 @@ import authenticateUser from "./middleware/authenticateUser.js";
 
 app.use(morgan("dev"));
 app.use(express.json());
-app.use(
-  helmet({
-    contentSecurityPolicy: {
-      directives: {
-        defaultSrc: ["'self'"],
-        baseUri: ["'self'"],
-        blockAllMixedContent: [],
-        fontSrc: ["'self'", "https:", "data:"],
-        frameAncestors: ["'self'"],
-        imgSrc: ["'self'", "blob:"],
-        objectSrc: ["'none'"],
-        scriptSrc: ["'self'"],
-        scriptSrcAttr: ["'none'"],
-        styleSrc: ["'self'", "https:", "'unsafe-inline'"],
-        upgradeInsecureRequests: [],
-      },
-    },
-  })
-);
+app.use(helmet());
 app.use(xss());
 app.use(mongoSanitize());
 

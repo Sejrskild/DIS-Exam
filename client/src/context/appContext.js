@@ -83,7 +83,6 @@ const initialState = {
   numOfPages: 1,
   stats: {},
   monthlyTasks: [],
-  // Search
   search: "",
   searchStatus: "alle",
   searchType: "alle",

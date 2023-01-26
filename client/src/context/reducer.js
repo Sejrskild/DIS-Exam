@@ -181,7 +181,7 @@ const reducer = (state, action) => {
       (task) => task._id === action.payload.id
     );
 
-    const { _id: id, task, description, area, taskType, status } = stateTask;
+    const { _id: id, task, description, area, status } = stateTask;
     return {
       ...state,
       isEditing: true,
@@ -269,7 +269,7 @@ const reducer = (state, action) => {
   }
 
   if (action.type === SEND_IMPROVEMENT_BEGIN) {
-    return { ...state };
+    return { ...state, isLoading: true };
   }
 
   if (action.type === SEND_IMPROVEMENT_SUCCESS) {

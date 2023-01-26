@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Wrapper from "../assets/wrappers/Navbar.js";
 import { RiMenu4Line } from "react-icons/ri";
-
 import { useAppContext } from "../context/appContext.js";
 import { Logo } from "../components";
 import { CiLogout } from "react-icons/ci";

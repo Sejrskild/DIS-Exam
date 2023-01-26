@@ -11,7 +11,8 @@
     "client": "npm start --prefix client",
     "concurrently-dev": "concurrently -kill-others-on-fail \"npm run client\" \" npm run server\"",
     "client-install": "cd client && npm install",
-    "heroku-postbuild": " npm run client-install && npm run client-builder && npm install"
+    "heroku-postbuild": " npm run client-install && npm run client-builder && npm install",
+    "full-install": "npm run client-install && npm install && npm run concurrently-dev"
   },
   "keywords": [],
   "author": "",

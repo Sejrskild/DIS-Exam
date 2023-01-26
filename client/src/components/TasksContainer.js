@@ -10,11 +10,9 @@ function TasksContainer() {
     getTasks,
     tasks,
     isLoading,
-    page,
     numberOfTasks,
     search,
     searchType,
-    status,
     sort,
     searchStatus,
   } = useAppContext();

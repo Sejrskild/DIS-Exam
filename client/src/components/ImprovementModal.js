@@ -2,10 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { IoIosSend } from "react-icons/io";
 import { useAppContext } from "../context/appContext";
-import { Alert } from "../components/index.js";
 
 function ImprovementModal() {
-  const { user, sendImprovementMail, showingAlert } = useAppContext();
+  const { user, sendImprovementMail } = useAppContext();
   const { email } = user;
   const handleSubmit = async (e) => {
     e.preventDefault();
